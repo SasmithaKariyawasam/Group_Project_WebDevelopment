@@ -13,7 +13,6 @@ if (isset($_POST["accept"])) {
     $quote_id = $_POST["quote_id"];
     $homeowner_id = $_SESSION["user_id"];
 
-    // Get quotation details
     $sql = "SELECT quotations.*, jobs.homeowner_id, jobs.status AS job_status
             FROM quotations
             JOIN jobs ON quotations.job_id = jobs.id
@@ -42,14 +41,12 @@ if (isset($_POST["accept"])) {
             mysqli_stmt_bind_param($stmt, "i", $quote_id);
             mysqli_stmt_execute($stmt);
 
-            // Reject other quotations
             $sql = "UPDATE quotations SET status = 'Rejected'
                     WHERE job_id = ? AND id != ?";
             $stmt = mysqli_prepare($conn, $sql);
             mysqli_stmt_bind_param($stmt, "ii", $job_id, $quote_id);
             mysqli_stmt_execute($stmt);
 
-            // Create booking
             $sql = "INSERT INTO bookings
                     (job_id, homeowner_id, repairman_id, price)
                     VALUES (?, ?, ?, ?)";
@@ -61,7 +58,6 @@ if (isset($_POST["accept"])) {
             );
             mysqli_stmt_execute($stmt);
 
-            // Update job status
             $sql = "UPDATE jobs SET status = 'Booked' WHERE id = ?";
             $stmt = mysqli_prepare($conn, $sql);
             mysqli_stmt_bind_param($stmt, "i", $job_id);
