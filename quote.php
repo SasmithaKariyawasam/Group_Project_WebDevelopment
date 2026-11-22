@@ -7,19 +7,6 @@ if (!isset($_SESSION["user_id"]) || $_SESSION["role"] != "repairman") {
     exit();
 }
 
-$id = $_SESSION["user_id"];
-
-$sql = "SELECT verified FROM users WHERE id = ?";
-$stmt = mysqli_prepare($conn, $sql);
-mysqli_stmt_bind_param($stmt, "i", $id);
-mysqli_stmt_execute($stmt);
-$result = mysqli_stmt_get_result($stmt);
-$user = mysqli_fetch_assoc($result);
-
-if ($user["verified"] != 1) {
-    die("Your account is waiting for admin verification");
-}
-
 $sql = "SELECT * FROM jobs WHERE status = 'Open' ORDER BY id DESC";
 $result = mysqli_query($conn, $sql);
 ?>
