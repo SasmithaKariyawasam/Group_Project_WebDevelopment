@@ -3,7 +3,7 @@
 <html>
 <head>
     <title>FixMate</title>
-    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -11,7 +11,6 @@
     <h2>FixMate</h2>
     <a href="index.php">Home</a>
     <a href="login.php">Login</a>
-    <a href="register.php">Register</a>
 </div>
 
 <div class="container">
