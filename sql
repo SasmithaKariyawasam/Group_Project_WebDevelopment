@@ -9,7 +9,6 @@ CREATE TABLE users (
     email VARCHAR(100) UNIQUE,
     password VARCHAR(255),
     role VARCHAR(20),
-    verified INT DEFAULT 0
 );
 
 CREATE TABLE jobs (
