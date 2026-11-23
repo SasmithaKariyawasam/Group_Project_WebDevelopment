@@ -56,7 +56,6 @@ $result = mysqli_stmt_get_result($stmt);
                     <option value="Completed">Completed</option>
                 </select>
 
-                <button type="submit" name="update">Update Status</button>
 
             </form>
 
@@ -64,7 +63,7 @@ $result = mysqli_stmt_get_result($stmt);
 
     <?php } ?>
 
-    <a href="dashboard.php">Back to Dashboard</a>
+    <a href="homeowner_dashboard.php">Back to Dashboard</a>
 
 </div>
 _

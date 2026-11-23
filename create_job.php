@@ -27,7 +27,7 @@ if (isset($_POST["submit"])) {
     );
 
     if (mysqli_stmt_execute($stmt)) {
-        header("Location: dashboard.php");
+        header("Location: homeowner_dashboard.php");
         exit();
     }
 }
@@ -52,12 +52,12 @@ if (isset($_POST["submit"])) {
         <textarea name="description" placeholder="Describe the problem" required></textarea>
 
         <input type="text" name="location" placeholder="Your Location" required>
-
+    
         <button type="submit" name="submit">Post Job</button>
 
     </form>
-
-    <a href="dashboard.php">Back</a>
+<br>
+    <a href="homeowner_dashboard.php">Back</a>
 
 </div>
 

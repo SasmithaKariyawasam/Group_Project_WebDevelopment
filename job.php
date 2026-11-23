@@ -85,7 +85,7 @@ $result = mysqli_stmt_get_result($stmt);
 
     <?php } ?>
 
-    <a href="dashboard.php">Back to Dashboard</a>
+    <a href="homeowner_dashboard.php">Back to Dashboard</a>
 
 </div>
 

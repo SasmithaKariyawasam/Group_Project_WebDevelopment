@@ -3,7 +3,7 @@
 <html>
 <head>
     <title>FixMate</title>
-    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 

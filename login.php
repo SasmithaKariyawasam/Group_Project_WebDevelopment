@@ -54,3 +54,33 @@ if (isset($_POST["login"])) {
     }
 }
 ?>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>User Login</h2>
+
+    <?php if (isset($error)) echo $error; ?>
+
+    <form method="POST">
+
+        <input type="email" name="email" placeholder="Email" required>
+
+        <input type="password" name="password" placeholder="Password" required>
+
+        <button type="submit" name="login">Login</button>
+
+    </form>
+
+    <p>New user? <a href="register.php">Register</a></p>
+</div>
+
+</body>
+</html>

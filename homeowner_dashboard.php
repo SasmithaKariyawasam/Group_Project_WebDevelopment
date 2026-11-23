@@ -29,7 +29,7 @@ $result = mysqli_stmt_get_result($stmt);
 
 <div class="navbar">
     <h2>FixMate</h2>
-    <a href="dashboard.php">Dashboard</a>
+    <a href="homeowner_dashboard.php">Dashboard</a>
     <a href="create_job.php">Create Job</a>
     <a href="bookings.php">My Bookings</a>
     <a href="logout.php">Logout</a>

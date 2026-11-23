@@ -22,7 +22,7 @@ $result = mysqli_query($conn, $sql);
 
 <div class="navbar">
     <h2>FixMate Admin</h2>
-    <a href="dashboard.php">Dashboard</a>
+    <a href="homeowner_dashboard.php">Dashboard</a>
     <a href="../logout.php">Logout</a>
 </div>
 

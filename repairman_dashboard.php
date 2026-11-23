@@ -22,7 +22,7 @@ $result = mysqli_query($conn, $sql);
 
 <div class="navbar">
     <h2>FixMate</h2>
-    <a href="dashboard.php">Available Jobs</a>
+    <a href="repairman_dashboard.php">Available Jobs</a>
     <a href="my_jobs.php">My Jobs</a>
     <a href="logout.php">Logout</a>
 </div>
@@ -41,7 +41,7 @@ $result = mysqli_query($conn, $sql);
 
             <p>Location: <?php echo htmlspecialchars($job["location"]); ?></p>
 
-            <a href="quote.php?id=<?php echo $job["id"]; ?>">Submit Quotation</a>
+            <a href="quote.php?job_id=<?php echo $job["id"]; ?>">Submit Quotation</a>
 
         </div>
 
