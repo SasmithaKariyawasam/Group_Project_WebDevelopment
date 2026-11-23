@@ -22,8 +22,8 @@ $result = mysqli_query($conn, $sql);
 
 <div class="navbar">
     <h2>FixMate Admin</h2>
-    <a href="homeowner_dashboard.php">Dashboard</a>
-    <a href="../logout.php">Logout</a>
+    <a href="admin_dashboard.php">Dashboard</a>
+    <a href="logout.php">Logout</a>
 </div>
 
 <div class="container">
@@ -39,26 +39,6 @@ $result = mysqli_query($conn, $sql);
             <p>Email: <?php echo htmlspecialchars($user["email"]); ?></p>
 
             <p>Role: <?php echo htmlspecialchars($user["role"]); ?></p>
-
-            <p>
-                Verification:
-                <?php
-                if ($user["verified"] == 1) {
-                    echo "Verified";
-                } else {
-                    echo "Not Verified";
-                }
-                ?>
-            </p>
-
-            <?php if ($user["role"] == "repairman" &&
-                      $user["verified"] == 0) { ?>
-
-                <a href="verify.php?id=<?php echo $user["id"]; ?>">
-                    Verify Repairman
-                </a>
-
-            <?php } ?>
 
         </div>
 
